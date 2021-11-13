@@ -9,15 +9,9 @@
   --logo-first-part-color: #2196f3;
   --logo-second-part-color: #000000;
   --logo-third-part-color: #ffffff;
+  --team-bg-color: #f5f4fa;
 }
-html {
-  box-sizing: border-box;
-}
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
+
 p,
 h1,
 h2,
@@ -25,11 +19,22 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 auto;
+  margin: 0;
 }
 ul {
   margin: 0;
   padding: 0;
+}
+
+.container {
+  width: 1200px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin: 0 auto;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 .link {
   text-decoration: none;
@@ -39,17 +44,33 @@ ul {
 }
 /*----main page----*/
 
-/*----header----*/
 body {
   background-color: var(--primary-white-color);
   font-family: "Roboto", sans-serif;
 }
+
+/*----header----*/
+.header {
+  border: 1px solid var(--primary-white-color);
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+.header-container {
+  display: flex;
+  align-items: center;
+}
+.header-nav {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  margin-right: 93px;
 }
 
 .logo-first-part {
@@ -67,6 +88,7 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--header-text-color);
+  display: flex;
 }
 .nav-item {
   font-weight: 500;
@@ -74,18 +96,36 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--header-text-color);
+  margin-top: 32px;
+  margin-right: 50px;
+  margin-bottom: 32px;
+}
+.nav-item:last-child {
+  margin-right: 0px;
+  margin-left: 0px;
 }
 .nav-item:hover,
 .nav-item:focus {
   color: var(--accent-text-color);
 }
-.header-item,
+.header-contacts {
+  display: flex;
+  margin-left: auto;
+}
 .header-link {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.header-item {
+  margin-right: 50px;
+}
+.header-item:last-child {
+  margin: 0px;
 }
 .header-item:hover,
 .header-item:focus,
@@ -97,14 +137,20 @@ body {
 .title {
   background-color: var(--section-bg-color);
 }
+
 .main-title {
   font-family: Roboto;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   text-align: center;
+  text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--title-text-color);
+  margin-top: 106px;
+  margin-right: 237px;
+  margin-bottom: 30px;
+  margin-left: 237px;
 }
 
 .main-page-btn {
@@ -113,12 +159,16 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
+  display: flex;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
   cursor: pointer;
+  margin-right: 453px;
+  margin-bottom: 106px;
+  margin-left: 453px;
+  padding: 10px 32px;
 }
-
 .main-page-btn:hover,
 .main-page-btn:focus {
   background-color: var(--accent-text-color);
@@ -134,6 +184,21 @@ body {
 .preferences-title {
   display: none;
 }
+.preferences {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+}
+.preferences-list {
+  display: flex;
+  align-items: center;
+}
+.preferences-item {
+  margin-right: 30px;
+}
+.preferences-item:last-child {
+  margin-right: 0px;
+}
 .preferences-header {
   font-weight: 700;
   font-size: 14px;
@@ -141,6 +206,7 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--header-text-color);
+  margin-bottom: 10px;
 }
 .preferences-text {
   font-size: 14px;
@@ -149,6 +215,7 @@ body {
   color: var(--primary-text-color);
 }
 /*----work----*/
+
 .work-title {
   font-weight: 700;
   font-size: 36px;
@@ -156,8 +223,22 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--header-text-color);
+  margin: 0px 385px 50px 385px;
+}
+.work-list {
+  display: flex;
+  align-items: center;
+}
+.work-item {
+  margin-right: 30px;
+}
+.work-item:last-child {
+  margin-right: 0px;
 }
 /*----team----*/
+.team {
+  background-color: var(--team-bg-color);
+}
 .team-title {
   font-weight: 700;
   font-size: 36px;
@@ -165,6 +246,24 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--header-text-color);
+  margin-right: 436px;
+  margin-bottom: 50px;
+  margin-left: 432px;
+}
+.team-list {
+  display: flex;
+  align-items: center;
+}
+
+.team-item {
+  margin-right: 30px;
+}
+.team-item:last-child {
+  margin-right: 0px;
+}
+.team-img {
+  display: block;
+  margin-bottom: 30px;
 }
 .team-header {
   font-weight: 500;
@@ -172,17 +271,24 @@ body {
   line-height: 1.18;
   letter-spacing: 0.03em;
   color: var(--header-text-color);
+  margin-bottom: 10px;
 }
 .team-text {
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
+  margin-bottom: 30px;
 }
 /*----footer----*/
 .footer {
   background-color: var(--section-bg-color);
 }
+.footer-container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .footer-logo {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
@@ -193,12 +299,22 @@ body {
 address {
   font-style: normal;
 }
+.address-list {
+  margin-top: 20px;
+}
+.address-contact {
+  margin-bottom: 9px;
+}
+.address-contact:last-child {
+  margin-bottom: 0px;
+}
 .address-link {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   color: var(--footer-address-color);
 }
+
 .address-address {
   font-size: 14px;
   line-height: 1.71;
@@ -215,6 +331,20 @@ address {
 .portfolio-title {
   display: none;
 }
+.filter {
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+  margin-right: 257px;
+  margin-bottom: 34px;
+  margin-left: 215px;
+}
+.filter-list {
+  margin-right: 8px;
+}
+..filter-list:last-child {
+  margin-right: 0px;
+}
 .filter-btn {
   font-weight: 500;
   font-size: 16px;
@@ -222,6 +352,7 @@ address {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--header-text-color);
+  padding: 6px 22px;
 }
 
 .filter-btn:hover,
@@ -235,16 +366,38 @@ address {
   letter-spacing: 0.03em;
   cursor: pointer;
 }
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+.gallery-item {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.gallery-link {
+  display: block;
+  margin-bottom: 20px;
+}
 .gallery-header {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--header-text-color);
+  margin-bottom: 4px;
+}
+.gallery-header:last-child {
+  margin-bottom: 0px;
 }
 .gallery-text {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
+}
+.gallery-item:nth-child(3n) {
+  margin-right: 0px;
+}
+.gallery-item:nth-last-child(-n + 3) {
+  margin-bottom: 0px;
 }
