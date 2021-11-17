@@ -10,7 +10,7 @@
   --logo-second-part-color: #000000;
   --logo-third-part-color: #ffffff;
   --team-bg-color: #f5f4fa;
-  --portfolio-card-color: #eeeeee;
+  --portfolio-box-color: #eeeeee;
 }
 
 p,
@@ -336,6 +336,19 @@ address {
 }
 /*----portfolio page-main----*/
 
+.preferences-title,
+.portfolio-title {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
 .filter {
   display: flex;
   align-items: center;
@@ -380,7 +393,6 @@ address {
 .gallery-item {
   margin-right: 30px;
   margin-bottom: 30px;
-  border: 1px solid var(--portfolio-card-color);
 }
 .gallery-link {
   display: block;
@@ -409,6 +421,8 @@ address {
 .gallery-item:nth-last-child(-n + 3) {
   margin-bottom: 0px;
 }
-.filter-box {
+.gallery-box {
   padding: 20px 24px;
+  border: 1px solid var(--portfolio-box-color);
+  box-sizing: border-box;
 }
