@@ -421,5 +421,4 @@ address {
 .gallery-box {
   padding: 20px 24px;
   border: 1px solid var(--portfolio-box-color);
-  box-sizing: border-box;
 }
