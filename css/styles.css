@@ -184,8 +184,18 @@ img {
   text-align: center;
 }
 /*----main-preferences----*/
-.preferences-title {
-  display: none;
+.preferences-title,
+.portfolio-title {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  padding: o;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .preferences-list {
