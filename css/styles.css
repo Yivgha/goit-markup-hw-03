@@ -10,6 +10,7 @@
   --logo-second-part-color: #000000;
   --logo-third-part-color: #ffffff;
   --team-bg-color: #f5f4fa;
+  --portfolio-card-color: #eeeeee;
 }
 
 p,
@@ -335,9 +336,6 @@ address {
 }
 /*----portfolio page-main----*/
 
-.portfolio-title {
-  display: none;
-}
 .filter {
   display: flex;
   align-items: center;
@@ -382,6 +380,7 @@ address {
 .gallery-item {
   margin-right: 30px;
   margin-bottom: 30px;
+  border: 1px solid var(--portfolio-card-color);
 }
 .gallery-link {
   display: block;
