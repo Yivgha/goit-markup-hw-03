@@ -345,6 +345,9 @@ address {
   border: 0;
   padding: 0;
   overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 .filter {
   display: flex;
